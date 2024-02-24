@@ -44,7 +44,7 @@ export default function NavBar() {
                 <div className={styles.containerLogo}>
                     ARGENSET
                 </div>
-                {widthWindow > 1024 ? (
+                {/* {widthWindow > 1024 ? (
                     <div className={styles.menu}>
                         <ul>
                             <li>Inicio</li>
@@ -71,7 +71,7 @@ export default function NavBar() {
                             <li>Contacto</li>
                         </ul>
                     </div>
-                )}
+                )} */}
             </div>
         </div>
     );

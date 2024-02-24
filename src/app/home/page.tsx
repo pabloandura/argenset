@@ -18,7 +18,7 @@ export default function Home() {
                 </div>
                 <div className={styles.textOverlay}>
                     <h1>SOMOS ARGENSET</h1>
-                    <div className={styles.containerButtonTextOverlay}>
+                    {/* <div className={styles.containerButtonTextOverlay}>
                         <button className={styles.buttonTextOverlay}>
                             <p>
                                 Conocenos
@@ -37,7 +37,7 @@ export default function Home() {
                                 <path d="M7 7H17V17" stroke="#D9DFED" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
                             </svg>
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <main className={styles.mainContent}>

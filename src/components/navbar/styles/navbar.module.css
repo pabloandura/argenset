@@ -46,14 +46,13 @@
     background-color: #D9DFED;
     opacity: 0;
     transition: opacity 0.3s ease, bottom 0.5s ease;
-    ;
 }
 
 .content {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
 }
 
 .imageLogo{

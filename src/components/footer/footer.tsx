@@ -10,11 +10,11 @@ export default function Footer() {
             <div className={styles.containerLogo}>
                 ARGENSET
             </div>
-            <ul>
+            {/* <ul>
                 <li>Menu</li>
                 <li>Social Life</li>
                 <li>Contacto</li>
-            </ul>
+            </ul> */}
         </div>
     );
 }
