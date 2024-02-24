@@ -7,13 +7,15 @@ export default function Home() {
     return (
         <div className={styles.container}>
             <div>
-                <Image 
-                    src="/gifs/gif.gif"
-                    alt="backGroundGif"
-                    width={3840}
-                    height={2160}
-                    className={styles.imageBackgroundGif}
-                />
+                <div className={styles.containerImageBackgroundGif}>
+                    <Image
+                        src="/gifs/gif.gif"
+                        alt="backGroundGif"
+                        width={480}
+                        height={864}
+                        className={styles.imageBackgroundGif}
+                    />
+                </div>
                 <div className={styles.textOverlay}>
                     <h1>SOMOS ARGENSET</h1>
                     <div className={styles.containerButtonTextOverlay}>
@@ -21,7 +23,7 @@ export default function Home() {
                             <p>
                                 Conocenos
                             </p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" className={styles.svgFlecha}>
                                 <path d="M7 17L17 7" stroke="#D9DFED" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
                                 <path d="M7 7H17V17" stroke="#D9DFED" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
                             </svg>
