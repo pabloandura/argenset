@@ -6,14 +6,16 @@ import Link from "next/link";
 
 const SpaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home({titulo}: {
+    titulo: string
+}) {
   return (
     <div className={styles.container}>
       <div>
         <div className={styles.containerImageBackgroundGif}>
           <Image
             src="/gifs/gif.gif"
-            alt="backGroundGif"
+            alt="produccion argenset"
             width={480}
             height={864}
             className={styles.imageBackgroundGif}
@@ -23,7 +25,7 @@ export default function Home() {
             <div className={styles.titleGroup}>
 
           <h1 className={`${SpaceGrotesk.className} grotesk`}>
-            HACEMOS ARGENSET{" "}
+            {titulo}{" "}
           </h1>
           <span
             style={{
@@ -34,8 +36,8 @@ export default function Home() {
           </span>
               </div>
           <main className={styles.mainContent}>
-            <Link href="/nosotros" className={`grotesk ${styles.homeHeroLink}`}>
-              Nosotros.
+            <Link href="/nosotrxs" className={`grotesk ${styles.homeHeroLink}`}>
+              Nosotrxs.
             </Link>
             <Link href="/trabajos" className={`grotesk ${styles.homeHeroLink}`}>
               Ver trabajos.

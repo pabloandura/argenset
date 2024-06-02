@@ -32,13 +32,13 @@ export default function RootLayout({ //Ruta raíz
 }>) {
   return (
       <html lang="en">
-            <MantineProvider>
           <body className={inter.className}>
+            <MantineProvider>
               <NavBar/>
               {children}
               <Footer/>
-          </body>
           </MantineProvider>
+          </body>
 
     </html>
   );

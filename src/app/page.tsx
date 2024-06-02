@@ -1,8 +1,11 @@
+import { Flex } from "@mantine/core";
 import Home from "../components/home/Home";
 
-export default function Body() {
+export default function HomePage() {
 
   return (
-      <Home/>
+    <Flex direction='column'>
+      <Home titulo='HACEMOS ARGENSET'/>
+    </Flex>
   );
 }

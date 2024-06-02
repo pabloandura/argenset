@@ -51,10 +51,10 @@ export default function NavBar() {
                     <div className={styles.menu}>
                         <Flex className={styles.desktopNavContainer} >
                             <Link className={styles.desktopNavItem} href='/'>Inicio</Link>
-                            <Link className={styles.desktopNavItem} href='/nosotros'>Nosotros</Link>
+                            <Link className={styles.desktopNavItem} href='/nosotrxs'>Nosotrxs</Link>
                             <Link className={styles.desktopNavItem} href='/servicios'>Servicios</Link>
                             <Link className={styles.desktopNavItem} href='/trabajos'>Trabajos</Link>
-                            <Link className={styles.desktopNavItem} href='/contancto'>Contacto</Link>
+                            <Link className={styles.desktopNavItem} href='/contacto'>Contacto</Link>
                         </Flex>
                     </div>
                 ) : (
@@ -68,10 +68,10 @@ export default function NavBar() {
                     <div className={styles.containerMenuDeployedHamburguer}>
                         <Flex direction='column'>
                             <Link className={styles.mobileNavItem} href='/'>Inicio</Link>
-                            <Link className={styles.mobileNavItem} href='/nosotros'>Nosotros</Link>
+                            <Link className={styles.mobileNavItem} href='/nosotrxs'>Nosotrxs</Link>
                             <Link className={styles.mobileNavItem} href='/servicios'>Servicios</Link>
                             <Link className={styles.mobileNavItem} href='/trabajos'>Trabajos</Link>
-                            <Link className={styles.mobileNavItem} href='/contancto'>Contacto</Link>
+                            <Link className={styles.mobileNavItem} href='/contacto'>Contacto</Link>
                         </Flex>
                     </div>
                 )}

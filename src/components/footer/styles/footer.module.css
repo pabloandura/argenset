@@ -8,7 +8,6 @@
     color: rgb(0, 0, 0);
     font-size: 2vw;
     padding: 1vw;
-    position: fixed;
     bottom: 0;
 }
 
@@ -37,12 +36,11 @@
     background-color: #D9DFED;
     opacity: 0;
     transition: opacity 0.3s ease, bottom 0.5s ease;
-    ;
 }
 
 .footer li:hover::after {
     opacity: 1;
-    bottom: -10px;
+    bottom: 10px;
 }
 
 .imageLogo {
