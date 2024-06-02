@@ -1,6 +1,9 @@
 'use client'
 import { useState, useEffect } from 'react';
 import styles from './styles/navbar.module.css';
+import { useMediaQuery } from '@mantine/hooks';
+import { Flex } from '@mantine/core';
+import Link from 'next/link';
 
 export default function NavBar() {
     const [isAtTop, setIsAtTop] = useState(true);
@@ -8,35 +11,35 @@ export default function NavBar() {
     const [widthWindow, setWidthWindow] = useState(0);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const handleScroll = () => {
+        const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+        setIsAtTop(currentScrollPos === 0);
+        setPrevScrollPos(currentScrollPos);
+    };
+
+    const handleResize = () => {
+        const windowWidth = window.innerWidth;
+        setWidthWindow(windowWidth);
+        if (windowWidth > 1024) {
+            setIsMenuOpen(false);
+        }
+    };
+    
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const isDesktop = !useMediaQuery('(max-width: 1024px)');
+
     useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
-            setIsAtTop(currentScrollPos === 0);
-            setPrevScrollPos(currentScrollPos);
-        };
-
-        const handleResize = () => {
-            const windowWidth = window.innerWidth;
-            setWidthWindow(windowWidth);
-            if (windowWidth > 1024) {
-                setIsMenuOpen(false);
-            }
-        };
-
         handleResize();
-
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('resize', handleResize);
-
         return () => {
             window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
 
     return (
         <div className={`${styles.navbar} ${isAtTop ? styles.hidden : ''}`}>
@@ -44,15 +47,15 @@ export default function NavBar() {
                 <div className={styles.containerLogo}>
                     ARGENSET
                 </div>
-                {/* {widthWindow > 1024 ? (
+                {isDesktop ? (
                     <div className={styles.menu}>
-                        <ul>
-                            <li>Inicio</li>
-                            <li>Nosotros</li>
-                            <li>Servicios</li>
-                            <li>Trabajos</li>
-                            <li>Contacto</li>
-                        </ul>
+                        <Flex className={styles.desktopNavContainer} >
+                            <Link className={styles.desktopNavItem} href='/'>Inicio</Link>
+                            <Link className={styles.desktopNavItem} href='/nosotros'>Nosotros</Link>
+                            <Link className={styles.desktopNavItem} href='/servicios'>Servicios</Link>
+                            <Link className={styles.desktopNavItem} href='/trabajos'>Trabajos</Link>
+                            <Link className={styles.desktopNavItem} href='/contancto'>Contacto</Link>
+                        </Flex>
                     </div>
                 ) : (
                     <div className={styles.containerHamburguerMenu} onClick={toggleMenu}>
@@ -63,15 +66,15 @@ export default function NavBar() {
                 )}
                 {isMenuOpen && (
                     <div className={styles.containerMenuDeployedHamburguer}>
-                        <ul className={styles.menuDeployedHamburguer}>
-                            <li>Inicio</li>
-                            <li>Nosotros</li>
-                            <li>Servicios</li>
-                            <li>Trabajos</li>
-                            <li>Contacto</li>
-                        </ul>
+                        <Flex direction='column'>
+                            <Link className={styles.mobileNavItem} href='/'>Inicio</Link>
+                            <Link className={styles.mobileNavItem} href='/nosotros'>Nosotros</Link>
+                            <Link className={styles.mobileNavItem} href='/servicios'>Servicios</Link>
+                            <Link className={styles.mobileNavItem} href='/trabajos'>Trabajos</Link>
+                            <Link className={styles.mobileNavItem} href='/contancto'>Contacto</Link>
+                        </Flex>
                     </div>
-                )} */}
+                )}
             </div>
         </div>
     );

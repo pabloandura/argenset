@@ -16,17 +16,16 @@
     background-color: rgba(141, 151, 161, 0.175);
 }
 
-.navbar ul {
+.desktopNavContainer {
     display: flex;
     list-style-type: none;
     gap: 2vw;
 }
 
-.navbar li {
+.desktopNavItem {
     cursor: pointer;
     position: relative;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
     color: #D9DFED;
     font-size: 1vw;
 }
@@ -52,7 +51,8 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
+    padding-right: 5vw;
 }
 
 .imageLogo{
@@ -61,7 +61,6 @@
 
 .containerLogo{
     text-align: center;
-    border: 0.5vw solid #ffffff;
     color: #ffffff;
     padding: 1vw;
     font-weight: bold;
@@ -78,9 +77,4 @@
 
 .containerHamburguerMenu:hover {
     background-color: #94949487;
-}
-
-.menuDeployedHamburguer{
-    display: flex;
-    flex-direction: column;
 }

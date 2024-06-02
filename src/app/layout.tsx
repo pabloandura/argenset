@@ -3,11 +3,13 @@ import { montserrat, inter, oswald } from '@/fonts';
 import '../globals.css';
 import NavBar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
+import { createTheme, MantineProvider } from '@mantine/core';
 import '../fonts';
+import '@mantine/core/styles.css';
 
 
 export const metadata: Metadata = {
-    title: "Coming Soon",
+    title: "ARGENSET",
     description: "Page about Messi",
     icons: {
         icon: [
@@ -30,11 +32,14 @@ export default function RootLayout({ //Ruta raíz
 }>) {
   return (
       <html lang="en">
+            <MantineProvider>
           <body className={inter.className}>
               <NavBar/>
               {children}
               <Footer/>
           </body>
+          </MantineProvider>
+
     </html>
   );
 }

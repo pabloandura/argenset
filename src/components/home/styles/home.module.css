@@ -21,19 +21,17 @@
     filter: brightness(70%);
 }
 
-.mainContent {
-    padding: 0.8vw;
+.titleGroup {
+    display: flex;
+    align-items: end;
 }
 
-.mainContent h2 {
-    width: 100%;
-    font-size: 5vw;
-    color: #AC151A;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    margin-top: 1vw;
-    margin-bottom: 4vw;
-    text-align: center;
+.mainContent {
+    padding-top: 2vh;
+    padding-left: 0.8vw;
+    display: flex;
+    width: 50vw;
+    gap: 5vw;
 }
 
 .textOverlay {
@@ -44,14 +42,26 @@
 
 }
 
-.textOverlay h1 {
+.textOverlay h1, .textOverlay span {
     font-size: 5vw;
     text-align: start;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
+    color: white;
     line-height: 1;
     margin-bottom: 0.5vw;
+    display: inline;
+}
+
+.homeHeroLink {
+    font-size: 2vw;
+    text-align: start;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+    margin-bottom: 0.5vw;
+    display: inline;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .containerButtonTextOverlay {
@@ -71,6 +81,10 @@
     border-radius: 50px;
     transition: transform 0.3s ease;
     margin-right: 1vw;
+}
+
+.buttonTextOverlay:hover {
+    color: rgb(88, 88, 88);
 }
 
 .buttonTextOverlay p {
