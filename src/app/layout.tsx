@@ -36,7 +36,7 @@ export default function RootLayout({ //Ruta raíz
             <MantineProvider>
               <NavBar/>
               {children}
-              <Footer/>
+              {/* <Footer/> */}
           </MantineProvider>
           </body>
 

@@ -16,11 +16,6 @@
     background-color: rgba(141, 151, 161, 0.175);
 }
 
-.desktopNavContainer {
-    display: flex;
-    list-style-type: none;
-    gap: 2vw;
-}
 
 .desktopNavItem {
     cursor: pointer;
@@ -62,10 +57,10 @@
 .containerLogo{
     text-align: center;
     color: #ffffff;
-    padding: 1vw;
+    padding-left: 2vw;
     font-weight: bold;
     cursor: pointer;
-    font-size: 1vw;
+    font-size: 4vw;
 }
 
 .containerHamburguerMenu {
@@ -75,6 +70,23 @@
     transition: background-color 0.3s ease;
 }
 
+.mobileNavItem {
+    color: black;
+}
+
 .containerHamburguerMenu:hover {
     background-color: #94949487;
+}
+@media (min-width: 1024px) {
+
+    .desktopNavContainer {
+        display: flex;
+        list-style-type: none;
+        gap: 2vw;
+    }
+
+.containerLogo {
+
+    font-size: 1vw;
+}
 }
