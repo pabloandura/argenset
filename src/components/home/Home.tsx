@@ -44,12 +44,15 @@ export default function Home({titulo, texto}: {
                 </Text>
                 :
                 <>
-                <Link href="/nosotrxs" className={`grotesk ${styles.homeHeroLink}`}>
+                <Text className={`grotesk ${styles.homeHeroLink}`}>
+                  En construccion
+                  </Text>
+                {/* <Link href="/nosotrxs" className={`grotesk ${styles.homeHeroLink}`}>
               Nosotrxs.
             </Link>
             <Link href="/trabajos" className={`grotesk ${styles.homeHeroLink}`}>
               Ver trabajos.
-            </Link>
+            </Link> */}
             </>
             }
           </main>

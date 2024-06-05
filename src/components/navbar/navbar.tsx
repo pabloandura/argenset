@@ -46,7 +46,7 @@ export default function NavBar() {
     <div className={`${styles.navbar} ${isAtTop ? styles.hidden : ""}`}>
       <div className={styles.content}>
         <div className={styles.containerLogo}>ARGENSET</div>
-        {isDesktop ? (
+        {/* {isDesktop ? (
           <div className={styles.menu}>
             <Flex className={styles.desktopNavContainer}>
               <Link className={styles.desktopNavItem} href="/">
@@ -121,7 +121,7 @@ export default function NavBar() {
               </Menu.Item>
             </Menu.Dropdown>
           </Menu>
-        )}
+        )} */}
       </div>
     </div>
   );
